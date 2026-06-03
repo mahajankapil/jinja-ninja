@@ -1,0 +1,83 @@
+@font-face {
+	font-family: LoveGamePixelFont;
+	src: url(../fonts/pixel.otf);
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+/* ─── shared menu container ─── */
+.spiderman-game-menu-container,
+.spiderman-game-menu-container * {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+
+.spiderman-game-menu-container {
+	position: absolute;
+	display: none;
+	height: auto;
+	background: linear-gradient(160deg, rgba(12,0,30,0.97) 0%, rgba(0,10,50,0.97) 100%);
+	border: 2px solid rgba(200,30,30,0.7);
+	border-radius: 14px;
+	padding: 28px 36px;
+	box-shadow: 0 0 40px rgba(200,30,30,0.3);
+
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.spiderman-game-menu-title {
+	text-align: center;
+	font-size: 18px;
+	line-height: 52px;
+	font-family: LoveGamePixelFont, monospace;
+	color: white;
+	display: block;
+	padding: 4px;
+	letter-spacing: 2px;
+	text-shadow: 0 0 10px rgba(255,80,80,0.6);
+}
+
+.spiderman-game-menu-button {
+	line-height: 32px;
+	font-size: 14px;
+	text-align: center;
+	font-family: LoveGamePixelFont, monospace;
+	color: rgba(255,255,255,0.85);
+	letter-spacing: 1px;
+	padding: 0 8px;
+	border-radius: 4px;
+	transition: color 0.12s, background 0.12s;
+}
+
+.spiderman-game-menu-button:hover {
+	color: #ff4444;
+	background: rgba(255,40,40,0.08);
+}
+
+.spiderman-game-menu-button:active {
+	color: rgb(200, 0, 0);
+}
+
+/* ─── key / door HUD icons ─── */
+.jn-hud-key {
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	width: 24px;
+	height: 24px;
+	opacity: 0.25;
+	pointer-events: none;
+	transition: opacity 0.3s;
+}
+.jn-hud-key.collected {
+	opacity: 1;
+	filter: drop-shadow(0 0 6px rgba(255,220,0,0.9));
+}
